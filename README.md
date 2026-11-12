@@ -2,8 +2,10 @@
 
 Native command-line client of [explainscore.com](https://explainscore.com): it measures a
 local repository or a public GitHub repository on your machine and scores it through
-the Repo Health service. Repository code is never executed or uploaded; only numeric
-measurements are sent for scoring.
+the Repo Health service. Repository code is never executed or uploaded: numeric
+measurements are sent for scoring, and your private project page keeps the score,
+categories and recommendations with references to places in the code (file:line,
+function names).
 
 This repository only hosts release packages. Download them from
 [Releases](https://github.com/Iliavas/repo-health-cli/releases): **Latest** is the
@@ -37,7 +39,8 @@ repo-health scan .
 
 The first run opens the Telegram sign-in page; after you press **Start** in the bot the
 scan continues and prints the health score with prioritized recommendations, and a
-private link to your project page with the score history. New accounts get $1 of
+private link to your project page with the score history and the latest recommendations.
+Your profile with balance, top-ups and all projects: https://explainscore.com/profile. New accounts get $1 of
 credit; a report costs $0.10.
 
 Other commands: `repo-health login`, `whoami`, `topup`, `logout`, `version`, `help`.
@@ -48,7 +51,8 @@ Other commands: `repo-health login`, `whoami`, `topup`, `logout`, `version`, `he
 
 Консольный клиент [explainscore.com](https://explainscore.com): оценивает локальный
 репозиторий или публичный репозиторий GitHub на вашем компьютере. Код не запускается
-и не загружается, на сервис уходят только числовые измерения.
+и не загружается: на оценку уходят числовые измерения, а приватная страница проекта
+хранит оценку, категории и рекомендации со ссылками на места в коде (файл:строка).
 
 Установка: `curl -fsSL https://explainscore.com/install.sh | sh` (Windows:
 `irm https://explainscore.com/install.ps1 | iex`), затем `repo-health scan .` —
